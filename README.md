@@ -30,8 +30,9 @@ This API represents possible operations required for a Tic Toc Toe Game. It has 
     * mvn spring-boot:run
 
 ## How to test/verify/play.
+
 * Once the application is running, use swagger gui to test/verify.
-* By defualt the swagger gui location will be as http://localhost:8000/api/tictactoe/swagger-ui.html.
+* By default the swagger gui location will be as http://localhost:8000/api/tictactoe/swagger-ui.html.
 * Game can be played with a series of requests as below. 
 
     ### player vs player
