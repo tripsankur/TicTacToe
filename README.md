@@ -1,4 +1,4 @@
-# TicTacToe - Rest Interface
+# TicTacToe - Rest Interface 
 ## Introduction
 
 This API represents possible operations required for a Tic Toc Toe Game. It has been developed using Spring Boot.
@@ -62,9 +62,7 @@ This API represents possible operations required for a Tic Toc Toe Game. It has 
 * Same user can have more than one open game. (Feature/Issue) 
 
 
-
-
-# API Specs & Design Descriptions
+# API Specs & Design
 ## Information
 * This API is built in Spring Boot.
 * It uses h2 database, can be changed using the configuration.
@@ -121,6 +119,7 @@ Request/Response structure is described in the Full Spec.
 This is the generated java doc from the project. It is available in the doc folder. (The link displayes the renderd html, which is not supported on github.)
     
 
-##### Notes
+#### Notes
 * Some of the API operations are not requied any more after the addition of Board in the Game class it self.
 * Tesing has been done using Swagger GUI.
+
