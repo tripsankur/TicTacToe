@@ -17,6 +17,7 @@ This API represents possible operations required for a Tic Toc Toe Game. It has 
 * Authentication at the API endpoint.
 * User login and player profile creation.
 * Option of selecting other algorithms for AI player.
+* Update in the documentation to display the API specs on the page itself.
 
 ## How to Run
 
@@ -26,8 +27,53 @@ This API represents possible operations required for a Tic Toc Toe Game. It has 
 
 
 
-# API Specs
+# API Specs & Design Descriptions
+### Information
+* This API is built in Spring Boot.
+* It uses h2 text based database. 
+* Management Port configured as 8000, can be modified
+* Base Url http://localhost:8000/api/tictactoe 
+
+### Schema Design
 
 
+
+## API Endpoints and Requests
+### game-controller
+Game Controller
+
+Index | Method | Path | Summary
+----- | ------ | ---- | --------
+1 | GET | /games | Lists all Games
+2 | POST | /games/game | Creates a New Game
+3 | GET | /games/game/{id} | View the game by ID
+4 | GET | /games/game/{id}/status | View the Status of the game by ID
+5 | GET | /games/game/{id}/winner | Find out the winner of the game by ID
+6 | POST | /games/join/{gameId}/{player} | Joins an existing Game
+7 | GET | /games/{player} | Lists all Games which are waiting for Second Player
+
+## action-controller
+Action Controller
+
+Index | Method | Path | Summary
+----- | ------ | ---- | -------
+1 | GET | /actions/auto/{gameId} | Automatic action for computer
+2 | GET | /actions/available/{gameId}/ | Returns all the available position for a game.
+3 | GET | /actions/check/{gameId}/{player} | Get All actions performed in a game by the player
+4 | GET | /actions/turn/{gameId}/{player} | Validates if is the turn of the player or not.
+5 | GET | /actions/{gameId} | Get All actions performed in a game.
+6 | POST | /actions/{gameId}/{player} | Create an action
+
+
+
+
+### Full Api Spec can be found [here](http://htmlpreview.github.io/?https://github.com/tripsankur/TicTacToe/blob/master/doc/ApiSpec.html)
+
+ApiSpec contains the details of the operations. This is present in the doc folder. (The link displays the renderd html)
+
+### Generated Java doc's are available [here](http://htmlpreview.github.io/https://github.com/tripsankur/TicTacToe/blob/master/doc/index.html)
+
+This is the generated java doc from the project. It is available in the doc folder. (The link displayes the renderd html, which is not supported on github.)
+    
 
     
