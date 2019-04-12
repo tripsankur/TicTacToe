@@ -31,7 +31,7 @@ This API represents possible operations required for a Tic Toc Toe Game. It has 
 
 ## How to test/verify/play.
 * Once the application is running, use swagger gui to test/verify.
-* By defualt the swagger gui location will be as http://localhost:8000/api/tictactoe/swagger-ui.html
+* By defualt the swagger gui location will be as http://localhost:8000/api/tictactoe/swagger-ui.html.
 * Game can be played with a series of requests as below. 
 
     ### player vs player
@@ -42,7 +42,7 @@ This API represents possible operations required for a Tic Toc Toe Game. It has 
     ### player vs computer
     * Create a game using **POST** operation on **/games/game** using player name and game type as "COMPUTER".
     * Place new moves using **Post** **/actions/{gameId}/{player}** and pass the move boardRow and boardColumn.
-    * Use **GET**  on **/actions/auto/{gameId}** to let the AI (MiniMax Algorithm)  play its move.
+    * Use **GET**  on **/actions/auto/{gameId}** to let the AI (MiniMax Algorithm)  play its move.    
 
 * API will do verification as below on every new Action.
     * Player is a part of the game.
