@@ -25,9 +25,9 @@ This API represents possible operations required for a Tic Toc Toe Game. It has 
 * Download the zip.
 * run mvn clean package.
 * run the jar generated in the target folder using below command
-java -jar target/tictactoe-0.0.1-SNAPSHOT.jar
+    * java -jar target/tictactoe-0.0.1-SNAPSHOT.jar
 * You can directly use the mvn plugin to run the application as well. (run in an exploded form as similar to IDE)
-mvn spring-boot:run
+    * mvn spring-boot:run
 
 ## How to test/verify/play.
 
@@ -91,7 +91,7 @@ Game Controller supports creation of Game, Joining an existing game, getting all
 Index | Method | Path | Summary
 ----- | ------ | ---- | --------
 1 | GET | /games | Lists all Games
-2 | POST | /games/game | Creates a New Game
+2 | POST | /games/game | Creates a New Game 
 3 | GET | /games/game/{id} | View the game by ID
 4 | GET | /games/game/{id}/status | View the Status of the game by ID
 5 | GET | /games/game/{id}/winner | Find out the winner of the game by ID
@@ -103,7 +103,7 @@ Action Controller helps in performing moves in the game, performing Auto Moves (
 
 Index | Method | Path | Summary
 ----- | ------ | ---- | -------
-1 | GET | /actions/auto/{gameId} | Automatic action for computer
+1 | GET | /actions/auto/{gameId} | Automatic action for computer. Computer will perform MiniMax Algorithm to identify the next move.
 2 | GET | /actions/available/{gameId}/ | Returns all the available position for a game.
 3 | GET | /actions/check/{gameId}/{player} | Get All actions performed in a game by the player
 4 | GET | /actions/turn/{gameId}/{player} | Validates if is the turn of the player or not.
@@ -114,10 +114,13 @@ Index | Method | Path | Summary
 ### Full Api Spec can be found [here](http://htmlpreview.github.io/?https://github.com/tripsankur/TicTacToe/blob/master/doc/ApiSpec.html)
 
 ApiSpec contains the details of the operations. This is present in the doc folder. (The link displays the renderd html)
+Request/Response structure is described in the Full Spec.
 
 ### Generated Java doc's are available [here](http://htmlpreview.github.io/https://github.com/tripsankur/TicTacToe/blob/master/doc/index.html)
 
 This is the generated java doc from the project. It is available in the doc folder. (The link displayes the renderd html, which is not supported on github.)
     
 
-    
+##### Notes
+* Some of the API operations are not requied any more after the addition of Board in the Game class it self.
+* Tesing has been done using Swagger GUI.
