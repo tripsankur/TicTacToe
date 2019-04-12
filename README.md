@@ -110,12 +110,12 @@ Index | Method | Path | Summary
 6 | POST | /actions/{gameId}/{player} | Create an action
 
 
-### Full Api Spec can be found [here](https://tripsankur.github.io/TicTacToe/ApiSpec.html)
+### Full Api Spec can be found [here](https://tripsankur.github.io/TicTacToe/docs/ApiSpec.html)
 
 ApiSpec contains the details of the operations. This is present in the doc folder. (The link displays the renderd html)
 Request/Response structure is described in the Full Spec.
 
-### Generated Java doc's are available [here](https://tripsankur.github.io/TicTacToe/index.html)
+### Generated Java doc's are available [here](https://tripsankur.github.io/TicTacToe/docs/index.html)
 
 This is the generated java doc from the project. It is available in the doc folder. (The link displayes the renderd html, which is not supported on github.)
     
