@@ -78,7 +78,7 @@ _3 tables are used in the API._
 - Board : Stores the Board information. (This is mainly used in MiniMax algorithm to find out the infromation diectly from the object)
 
 **DB Schema is as below**
-![Image of Yaktocat](https://github.com/tripsankur/TicTacToe/blob/master/doc/DB_Schema.jpeg)
+![Image of Yaktocat](https://github.com/tripsankur/TicTacToe/docs/DB_Schema.jpeg)
 
 ## API Endpoints and Requests
 
