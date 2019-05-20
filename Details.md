@@ -46,9 +46,10 @@ To Run the application
 ## Testing 
 
 Unit testing and Integration testing has been performed and the src is present in the application src/test/ directory.
-  a. All actions validated and tested.
-  b. All Exceptions validated and tested.
-  c. Possible error scenarios validated and tested.
+
+  * All actions validated and tested.
+  * All Exceptions validated and tested.
+  * Possible error scenarios validated and tested.
 
   
 
