@@ -19,6 +19,12 @@ This application is written in Java 8. It performs below functions.
 * Input format is defined and followed. (Exception is thrown in case the input format is not correct.)
 * Excpetion InvaliActionException is thrown by the application, if the Action is different than 'L','R','M'.
 
+## How it works
+
+* RoverController : This is the main class, which starts the application. Input file is passed as argument to this class,
+* Position : This class creates the position object, stores the x, y coordinate and provides methods to increase/decrease the coordinates.
+* MarseRover: This class is contains all methods to perform operations on the rover. It maintains the position and facing of the rover and controle the movements and tracks the action being performed on the rover.
+
 ## How to use the Application
 
 This application takes 1 argument as below.
