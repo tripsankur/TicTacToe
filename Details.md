@@ -86,6 +86,7 @@ This application is written in Java 8. It performs below functions.
 
 <p>
 <font size="8">
+  
 | Config Value      | Explanation |
 | ----------------- | ------------- |
 | `Column_Metadata`   | Path of the Metadata file |
@@ -96,6 +97,7 @@ This application is written in Java 8. It performs below functions.
 | `Short_Key`         | QUANTITY SHORT |
 | `Long_Key`          | QUANTITY LONG |
 | `Unique_Row`        | to identify a unique row, example -CLIENT TYPE\|CLIENT NUMBER\|ACCOUNT NUMBER\|SUBACCOUNT NUMBER\|EXCHANGE CODE\|PRODUCT GROUP CODE\|SYMBOL\|EXPIRATION DATE |
+
 </font>
 </p>
 
