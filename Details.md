@@ -65,7 +65,15 @@ This application is written in Java 8. It performs below functions.
 * Extra space at the end of each field will not be removed by default while parsing the record values (This can be changed by modifying the config value of Trim_Spaces to true.). The output.csv will have the same effect. 
 
 
+
+
+
+
 <div style="page-break-after: always;"></div>
+
+
+
+
 
 <a name="How"></a>
 ## How to Configure
@@ -109,7 +117,16 @@ This application is written in Java 8. It performs below functions.
 | QUANTITY SHORT,64,72,LONG,NA |
 | TRANSACTION DATE,122,129,DATE,CCYYMMDD |
 
+
+
+
+
 <div style="page-break-after: always;"></div>
+
+
+
+
+
 
 <a name="HowApp"></a>
 ## How to use the Application
