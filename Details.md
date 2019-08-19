@@ -42,7 +42,7 @@
 
 The CSV has the following Headers
 
-* Client_Information: A combination of the CLIENT TYPE, CLIENT NUMBER, ACCOUNT NUMBER, SUBACCOUNT NUMBER fields from Input file
+* Client_Information: A combination of the CLIENT TYPE, CLIENT NUMBER, ACCOUNT NUMBER, SUBACCOUNT NUMBER fields from the Input file
 * Product_Information: A combination of the EXCHANGE CODE, PRODUCT GROUP CODE, SYMBOL, EXPIRATION DATE
 * Total_Transaction_Amount: A Net Total of the (QUANTITY LONG - QUANTITY SHORT) values for each client per product
 
@@ -53,15 +53,15 @@ Notes: Each Record in the input file represents ONE Transaction from the client 
 
 This application is written in Java 8. It performs below functions.
 
-* This application creates a new csv file using the provided configuration and metadata file.
+* This application creates a new CSV file using the provided configuration and metadata file.
 * It streams each line, parse it and does the computation to create List of Transaction Amounts for each client per product.
-* Once the record is created, application writes the data to the output file.
+* Once the record is created, the application writes the data to the output file.
   
 <a name="Assumptions"></a>
 ## 3. Assumptions
 
-* A unique record for each client per product is taken as a combination of CLIENT TYPE, CLIENT NUMBER, ACCOUNT NUMBER, SUBACCOUNT NUMBER, EXCHANGE CODE, PRODUCT GROUP CODE, SYMBOL and EXPIRATION DATE. (Assumption is that TRANSACTION DATE is not requrired for identification of Unique record. Uniquer Record Field in config can be updated to include TRANSACTION DATE.)
-* There is no field seprator in the Output apart from ",". For example, Client_Information field will be a combination of CLIENT TYPE, CLIENT NUMBER, ACCOUNT NUMBER, SUBACCOUNT NUMBER without any field seprator.
+* A unique record for each client per product is taken as a combination of CLIENT TYPE, CLIENT NUMBER, ACCOUNT NUMBER, SUBACCOUNT NUMBER, EXCHANGE CODE, PRODUCT GROUP CODE, SYMBOL, and EXPIRATION DATE. (Assumption is that TRANSACTION DATE is not required for the identification of Unique record. Unique Record Field in config can be updated to include TRANSACTION DATE.)
+* There is no field separator in the Output apart from ",". For example, Client_Information field will be a combination of CLIENT TYPE, CLIENT NUMBER, ACCOUNT NUMBER, SUBACCOUNT NUMBER without any field separator.
 * Extra space at the end of each field will not be removed by default while parsing the record values (This can be changed by modifying the config value of Trim_Spaces to true.). The output.csv will have the same effect. 
 
 
@@ -80,7 +80,7 @@ This application is written in Java 8. It performs below functions.
 
 ### 4.1 config.properties
 
-- Application needs a config file (*config.properties*) to perform the required action. 
+- The application needs a config file (*config.properties*) to perform the required action. 
 - Below are the config values.
 - Config file should either be provided in the command line with the argument -Dconfig=<> or should be placed in the directory where the Jar is copied.
 
@@ -99,9 +99,9 @@ This application is written in Java 8. It performs below functions.
 ### 4.2 Metadata File
 
 * This file contains the Columns to extract from the input file.
-* It is a comma separated file.
+* It is a comma-separated file.
 * The column name specified in the metadata file is the default definition and the same should be used in all other places/configuration.
-* This file defines the start and end index of each field,type of the field and the format. (Type and Field format have not been used in this version.)
+* This file defines the start and end index of each field, type of the field and the format. (Type and Field format have not been used in this version.)
 
 | Column Name,Start Index,End Index,Type,Format      |
 | ----------------- |
@@ -131,23 +131,22 @@ This application is written in Java 8. It performs below functions.
 <a name="HowApp"></a>
 ## 5. How to use the Application
 
-This application takes 4 arguments as below.
->
-* Argument 1 - Manadatory - Complete Path of the Input File in Fixed File Format.
-* Argument 2 - Manadatory - Complete Path for the output file.
->
+This application takes 2 arguments as below.
+
+> * Argument 1 - Mandatory - Complete Path of the Input File in Fixed File Format.
+> * Argument 2 - Mandatory - Complete Path for the output file.
 
 <a name="possible"></a>
 ## 6. Future Possible Improvements 
 
-* Program to take input directory from config file and perform read on regular basis for a new file.
-* Program to have defined outpur directory in the config file and it writes a new output file for each date.
+* Program to take input directory from the config file and perform read regularly for a new file.
+* Program to have defined output directory in the config file and it writes a new output file for each date.
 * Program currently validates the Line Length but it can be enhanced to track the error records and write to a different file.
 
 <a name="HowBuild"></a>
 ## 7. How to Build and Run.
 
-To Build the pacakge 
+To Build the package 
 
 > *mvn clean compile assembly:single*
 
@@ -162,7 +161,7 @@ Example:
 <a name="test"></a>
 ## 8. Testing 
 
-Most of the comman scnearios have been validated with junit and manual testing. Test src is included in the repository.
+Most of the common scenarios have been validated with JUnit and manual testing. Test src is included in the repository.
 
 <a name="troubleshooting"></a>
 ## 9. Troubleshooting
