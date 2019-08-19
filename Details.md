@@ -10,11 +10,10 @@
 6. [ Future Possible Improvements . ](#possible)
 7. [ How to Build and Run. ](#HowBuild)
 8. [ Testing. ](#test)
+8. [ Troubleshooting. ](#troubleshooting)
 
 
-
-
-
+------
 
 <a name="req"></a>
 ## 1. Requirement
@@ -36,7 +35,7 @@ Notes: Each Record in the input file represents ONE Transaction from the client 
 
 This application is written in Java 8. It performs below functions.
 
-* This application creates a new csv file using the provided metadata file.
+* This application creates a new csv file using the provided configuration and metadata file.
 * It streams each line, parse it and does the computation to create List of Transaction Amounts for each client per product.
 * Once the record is created, application writes the data to the output file.
   
@@ -125,8 +124,15 @@ Example:
 
 Most of the comman scnearios have been validated with junit and manual testing. Test src is included in the repository.
 
+<a name="troubleshooting"></a>
+## Troubleshooting
 
-  
+* **FileNotFoundException:** Validate the location of the Metadata file, Config File, Input file, Log File and Output.
+* **No Record in Output:** Validate if the Fixed_Length in the config is correct and matching with the input file line width.
+* **NotEnoughArgumentException:** Validate the number of Arguments passed to the Application.
+* Follow the log files to find out about the issues.
+
+
 
 
 
