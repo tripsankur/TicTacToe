@@ -49,7 +49,7 @@ The CSV has the following Headers
 Notes: Each Record in the input file represents ONE Transaction from the client for a particular product. 
 
 <a name="intro"></a>
-## Introduction
+## 2. Introduction
 
 This application is written in Java 8. It performs below functions.
 
@@ -58,7 +58,7 @@ This application is written in Java 8. It performs below functions.
 * Once the record is created, application writes the data to the output file.
   
 <a name="Assumptions"></a>
-## Assumptions
+## 3. Assumptions
 
 * A unique record for each client per product is taken as a combination of CLIENT TYPE, CLIENT NUMBER, ACCOUNT NUMBER, SUBACCOUNT NUMBER, EXCHANGE CODE, PRODUCT GROUP CODE, SYMBOL and EXPIRATION DATE. (Assumption is that TRANSACTION DATE is not requrired for identification of Unique record. Uniquer Record Field in config can be updated to include TRANSACTION DATE.)
 * There is no field seprator in the Output apart from ",". For example, Client_Information field will be a combination of CLIENT TYPE, CLIENT NUMBER, ACCOUNT NUMBER, SUBACCOUNT NUMBER without any field seprator.
@@ -76,9 +76,9 @@ This application is written in Java 8. It performs below functions.
 
 
 <a name="How"></a>
-## How to Configure
+## 4. How to Configure
 
-### config.properties
+### 4.1 config.properties
 
 - Application needs a config file (*config.properties*) to perform the required action. 
 - Below are the config values.
@@ -96,7 +96,7 @@ This application is written in Java 8. It performs below functions.
 | `Unique_Row`        | to identify a unique row, example -CLIENT TYPE\|CLIENT NUMBER\|ACCOUNT NUMBER\|SUBACCOUNT NUMBER\|EXCHANGE CODE\|PRODUCT GROUP CODE\|SYMBOL\|EXPIRATION DATE |
 
 
-### Metadata File
+### 4.2 Metadata File
 
 * This file contains the Columns to extract from the input file.
 * It is a comma separated file.
@@ -129,7 +129,7 @@ This application is written in Java 8. It performs below functions.
 
 
 <a name="HowApp"></a>
-## How to use the Application
+## 5. How to use the Application
 
 This application takes 4 arguments as below.
 >
@@ -138,14 +138,14 @@ This application takes 4 arguments as below.
 >
 
 <a name="possible"></a>
-## Future Possible Improvements 
+## 6. Future Possible Improvements 
 
 * Program to take input directory from config file and perform read on regular basis for a new file.
 * Program to have defined outpur directory in the config file and it writes a new output file for each date.
 * Program currently validates the Line Length but it can be enhanced to track the error records and write to a different file.
 
 <a name="HowBuild"></a>
-## How to Build and Run.
+## 7. How to Build and Run.
 
 To Build the pacakge 
 
@@ -160,12 +160,12 @@ Example:
 > java -Dconfig="C:\Users\tripaank\Downloads\config.properties"  -Dlog4j.configuration=file:"C:\Users\tripaank\log4j.properties" -jar Future-Transaction-Writer-1.0.jar "C:\Users\tripaank\input" "C:\Users\tripaank\Output.csv"
 
 <a name="test"></a>
-## Testing 
+## 8. Testing 
 
 Most of the comman scnearios have been validated with junit and manual testing. Test src is included in the repository.
 
 <a name="troubleshooting"></a>
-## Troubleshooting
+## 9. Troubleshooting
 
 * **FileNotFoundException:** Validate the location of the Metadata file, Config File, Input file, Log File and Output.
 * **No Record in Output:** Validate if the Fixed_Length in the config is correct and matching with the input file line width.
