@@ -96,6 +96,16 @@ This application is written in Java 8. It performs below functions.
 | `Unique_Row`        | to identify a unique row, example -CLIENT TYPE\|CLIENT NUMBER\|ACCOUNT NUMBER\|SUBACCOUNT NUMBER\|EXCHANGE CODE\|PRODUCT GROUP CODE\|SYMBOL\|EXPIRATION DATE |
 
 
+
+
+
+
+<div style="page-break-after: always;"></div>
+
+
+
+
+
 ### 4.2 Metadata File
 
 * This file contains the Columns to extract from the input file.
