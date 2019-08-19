@@ -14,6 +14,8 @@
 
 
 
+
+
 <a name="req"></a>
 ## 1. Requirement
 
@@ -91,9 +93,10 @@ This application is written in Java 8. It performs below functions.
 ## How to use the Application
 
 This application takes 4 arguments as below.
-
+>
 * Argument 1 - Manadatory - Complete Path of the Input File in Fixed File Format.
 * Argument 2 - Manadatory - Complete Path for the output file.
+>
 
 <a name="possible"></a>
 ## Future Possible Improvements 
@@ -107,11 +110,15 @@ This application takes 4 arguments as below.
 
 To Build the pacakge 
 
-*mvn clean compile assembly:single*
+> *mvn clean compile assembly:single*
 
-To Run the application
+To Run the application:
 
-*java -jar {target_dir}/Fixed-File-Format-Converter-0.0.1-SNAPSHOT.jar <Argument 1> <Argument 2> <Argiment 3> <"true"|"false">*
+> *java -Dconfig="<config_file_path>" -Dlog4j.configuration="< log4j properti path>" -jar {target_dir}/Future-Transaction-Writer-1.0.jar <Argument 1> <Argument 2>*
+
+Example: 
+
+> java -Dconfig="C:\Users\tripaank\Downloads\config.properties"  -Dlog4j.configuration=file:"C:\Users\tripaank\log4j.properties" -jar Future-Transaction-Writer-1.0.jar "C:\Users\tripaank\input" "C:\Users\tripaank\Output.csv"
 
 <a name="test"></a>
 ## Testing 
