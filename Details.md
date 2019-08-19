@@ -84,6 +84,8 @@ This application is written in Java 8. It performs below functions.
 - Below are the config values.
 - Config file should either be provided in the command line with the argument -Dconfig=<> or should be placed in the directory where the Jar is copied.
 
+<p>
+<font size="8">
 | Config Value      | Explanation |
 | ----------------- | ------------- |
 | `Column_Metadata`   | Path of the Metadata file |
@@ -94,7 +96,8 @@ This application is written in Java 8. It performs below functions.
 | `Short_Key`         | QUANTITY SHORT |
 | `Long_Key`          | QUANTITY LONG |
 | `Unique_Row`        | to identify a unique row, example -CLIENT TYPE\|CLIENT NUMBER\|ACCOUNT NUMBER\|SUBACCOUNT NUMBER\|EXCHANGE CODE\|PRODUCT GROUP CODE\|SYMBOL\|EXPIRATION DATE |
-
+</font>
+</p>
 
 
 
@@ -113,6 +116,9 @@ This application is written in Java 8. It performs below functions.
 * The column name specified in the metadata file is the default definition and the same should be used in all other places/configuration.
 * This file defines the start and end index of each field, type of the field and the format. (Type and Field format have not been used in this version.)
 
+<p>
+<font size="8">
+
 | Column Name,Start Index,End Index,Type,Format      |
 | ----------------- |
 | CLIENT TYPE,4,7,STRING,NA |
@@ -127,6 +133,8 @@ This application is written in Java 8. It performs below functions.
 | QUANTITY SHORT,64,72,LONG,NA |
 | TRANSACTION DATE,122,129,DATE,CCYYMMDD |
 
+</font>
+</p>
 
 
 
